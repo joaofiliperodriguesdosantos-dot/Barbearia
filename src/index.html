@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#inicio" class="logo">BLACK<span>STYLE</span></a>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+            <ul class="menu" id="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#agendar">Agendar</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- imagem principal -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="subtitulo">ESTILO E QUALIDADE</p>
+                <h1>Seu estilo,<br>nosso compromisso.</h1>
+                <p>
+                    Cortes modernos, barba impecável e
+                    atendimento de qualidade.
+                </p>
+                <a href="#agendar" class="btn">Agendar horário</a>
+            </div>
+        </section>
+
+        <!-- serv -->
+        <section class="section" id="servicos">
+            <p class="subtitulo">O QUE OFERECEMOS</p>
+            <h2>Nossos serviços</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="icone">✂️</div>
+                    <h3>Corte masculino</h3>
+                    <p>Corte tradicional ou moderno.</p>
+                    <strong>R$ 30,00</strong>
+                    <p class="duracao">40 minutos</p>
+                    <button class="btn btn-servico"
+                            data-servico="Corte masculino">
+                        Agendar
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="icone">🧔</div>
+                    <h3>Barba</h3>
+                    <p>Modelagem e acabamento da barba.</p>
+                    <strong>R$ 20,00</strong>
+                    <p class="duracao">30 minutos</p>
+                    <button class="btn btn-servico"
+                            data-servico="Barba">
+                        Agendar
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="icone">💈</div>
+                    <h3>Corte + Barba</h3>
+                    <p>O combo completo para seu visual.</p>
+                    <strong>R$ 45,00</strong>
+                    <p class="duracao">60 minutos</p>
+                    <button class="btn btn-servico"
+                            data-servico="Corte + Barba">
+                        Agendar
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="icone">✨</div>
+                    <h3>Sobrancelha</h3>
+                    <p>Acabamento e alinhamento.</p>
+                    <strong>R$ 10,00</strong>
+                    <p class="duracao">15 minutos</p>
+                    <button class="btn btn-servico"
+                            data-servico="Sobrancelha">
+                        Agendar
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="icone">👦</div>
+                    <h3>Corte infantil</h3>
+                    <p>Corte especial para crianças.</p>
+                    <strong>R$ 25,00</strong>
+                    <p class="duracao">30 minutos</p>
+                    <button class="btn btn-servico"
+                            data-servico="Corte infantil">
+                        Agendar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- AGENDAMENTO -->
+        <section class="section agendamento" id="agendar">
+            <p class="subtitulo">RESERVE SEU HORÁRIO</p>
+            <h2>Agende seu atendimento</h2>
+
+            <form id="formAgendamento">
+                <div class="form-grid">
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome"
+                               placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone"
+                               placeholder="(85) 99999-9999" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="servico">Serviço</label>
+                        <select id="servico" required>
+                            <option value="">Selecione o serviço</option>
+                            <option value="Corte masculino">Corte masculino - R$ 30</option>
+                            <option value="Barba">Barba - R$ 20</option>
+                            <option value="Corte + Barba">Corte + Barba - R$ 45</option>
+                            <option value="Sobrancelha">Sobrancelha - R$ 10</option>
+                            <option value="Corte infantil">Corte infantil - R$ 25</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="barbeiro">Barbeiro</label>
+                        <select id="barbeiro" required>
+                            <option value="">Selecione</option>
+                            <option value="João">Filipe</option>
+                            <option value="Carlos">Levi</option>
+                            <option value="Rafael">Luiz Carlos</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="data">Data</label>
+                        <input type="date" id="data" required>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label>Escolha um horário disponível</label>
+                    <div id="horarios" class="horarios">
+                        <p class="mensagem-horario">
+                            Selecione uma data para ver os horários.
+                        </p>
+                    </div>
+                    <input type="hidden" id="horario" required>
+                </div>
+
+                <p id="resumo" class="resumo">
+                    Preencha os dados para visualizar o resumo.
+                </p>
+
+                <button type="submit" class="btn btn-confirmar">
+                    Confirmar agendamento
+                </button>
+
+                <p id="mensagem" class="mensagem"></p>
+            </form>
+        </section>
+
+<!-- LISTA DE AGENDAMENTOS -->
+        <section class="section" id="reservas">
+            <p class="subtitulo">CONTROLE DE HORÁRIOS</p>
+            <h2>Meus agendamentos</h2>
+
+            <div id="listaAgendamentos" class="lista-agendamentos">
+                <p>Nenhum agendamento realizado ainda.</p>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section class="section sobre" id="sobre">
+            <p class="subtitulo">CONHEÇA A BLACK STYLE</p>
+            <h2>Sobre a barbearia</h2>
+            <p>
+                A Black Style nasceu para oferecer cortes modernos,
+                cuidado com a barba e um ambiente confortável.
+                Nossa missão é valorizar o estilo de cada cliente.
+            </p>
+
+            <div class="info-grid">
+                <div>
+                    <h3>🕐 Horário de funcionamento</h3>
+                    <p>Segunda a sábado: 09h às 19h</p>
+                </div>
+                <div>
+                    <h3>📍 Localização</h3>
+                    <p>Rua 1° de Abril, 169 – Boa vista-Castelão</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="section contato" id="contato">
+            <p class="subtitulo">FALE CONOSCO</p>
+            <h2>Entre em contato</h2>
+
+            <div class="contato-grid">
+                <div>
+                    <p>📞 (85) 98793-6454</p>
+                    <p>📷 @joaofiliperodriguesdosantos@gmail.com</p>
+                    <p>📍 Fortaleza – Ceará</p>
+                </div>
+
+                <form id="formContato">
+                    <input type="text" id="nomeContato"
+                           placeholder="Seu nome" required>
+                    <input type="email" id="emailContato"
+                           placeholder="Seu e-mail" required>
+                    <textarea id="mensagemContato"
+                              placeholder="Digite sua mensagem"
+                              required></textarea>
+                    <button type="submit" class="btn">
+                        Enviar mensagem
+                    </button>
+                    <p id="respostaContato"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©️ 2026 Black Style Barbearia. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
