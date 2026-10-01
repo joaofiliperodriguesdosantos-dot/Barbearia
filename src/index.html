@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#inicio" class="logo">BLACK<span>STYLE</span></a>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+            <ul class="menu" id="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#agendar">Agendar</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- imagem principal -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="subtitulo">ESTILO E QUALIDADE</p>
+                <h1>Seu estilo,<br>nosso compromisso.</h1>
+                <p>
+                    Cortes modernos, barba impecável e
+                    atendimento de qualidade.
+                </p>
+                <a href="#agendar" class="btn">Agendar horário</a>
+            </div>
+        </section>
+
+        <!-- serv -->
+        <section class="section" id="servicos">
+            <p class="subtitulo">O QUE OFERECEMOS</p>
+            <h2>Nossos serviços</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="icone">✂️</div>
+                    <h3>Corte masculino</h3>
+                    <p>Corte tradicional ou moderno.</p>
+                    <strong>R$ 30,00</strong>
+                    <p class="duracao">40 minutos</p>
+                    <button class="btn btn-servico"
+                            data-servico="Corte masculino">
+                        Agendar
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="icone">🧔</div>
+                    <h3>Barba</h3>
+                    <p>Modelagem e acabamento da barba.</p>
+                    <strong>R$ 20,00</strong>
+                    <p class="duracao">30 minutos</p>
+                    <button class="btn btn-servico"
+                            data-servico="Barba">
+                        Agendar
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="icone">💈</div>
+                    <h3>Corte + Barba</h3>
+                    <p>O combo completo para seu visual.</p>
+                    <strong>R$ 45,00</strong>
+                    <p class="duracao">60 minutos</p>
+                    <button class="btn btn-servico"
+                            data-servico="Corte + Barba">
+                        Agendar
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="icone">✨</div>
+                    <h3>Sobrancelha</h3>
+                    <p>Acabamento e alinhamento.</p>
+                    <strong>R$ 10,00</strong>
+                    <p class="duracao">15 minutos</p>
+                    <button class="btn btn-servico"
+                            data-servico="Sobrancelha">
+                        Agendar
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="icone">👦</div>
+                    <h3>Corte infantil</h3>
+                    <p>Corte especial para crianças.</p>
+                    <strong>R$ 25,00</strong>
+                    <p class="duracao">30 minutos</p>
+                    <button class="btn btn-servico"
+                            data-servico="Corte infantil">
+                        Agendar
+                    </button>
+                </div>
+            </div>
+        </section>
+<!-- AGENDAMENTO -->
+<section class="section agendamento" id="agendar">
+<p class="subtitulo">RESERVE SEU HORÁRIO</p>
+<h2>Agende seu atendimento</h2>
+
+<form id="formAgendamento">
+<div class="form-grid">
+<div class="campo">
+<label for="nome">Nome completo</label>
+<input type="text" id="nome"
+placeholder="Digite seu nome" required>
+</div>
+
+<div class="campo">
+<label for="telefone">Telefone</label>
+<input type="tel" id="telefone"
+placeholder="(85) 99999-9999" required>
+</div>
+
+<div class="campo">
+<label for="servico">Serviço</label>
+<select id="servico" required>
+<option value="">Selecione o serviço</option>
+<option value="Corte masculino">Corte masculino - R$ 30</option>
+<option value="Barba">Barba - R$ 20</option>
+<option value="Corte + Barba">Corte + Barba - R$ 45</option>
+<option value="Sobrancelha">Sobrancelha - R$ 10</option>
+<option value="Corte infantil">Corte infantil - R$ 25</option>
+</select>
+</div>
+
+<div class="campo">
+<label for="barbeiro">Barbeiro</label>
+<select id="barbeiro" required>
+<option value="">Selecione</option>
+<option value="João">Filipe</option>
+<option value="Carlos">Levi</option>
+<option value="Rafael">Luiz Carlos</option>
+</select>
+</div>
+
+<div class="campo">
+<label for="data">Data</label>
+<input type="date" id="data" required>
+</div>
+</div>
+
+<div class="campo">
+<label>Escolha um horário disponível</label>
+<div id="horarios" class="horarios">
+<p class="mensagem-horario">
+Selecione uma data para ver os horários.
+</p>
+</div>
+<input type="hidden" id="horario" required>
+</div>
+
+<p id="resumo" class="resumo">
+Preencha os dados para visualizar o resumo.
+</p>
+
+<button type="submit" class="btn btn-confirmar">
+Confirmar agendamento
+</button>
+
+<p id="mensagem" class="mensagem"></p>
+</form>
+</section>
