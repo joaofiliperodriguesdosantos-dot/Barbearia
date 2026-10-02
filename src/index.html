@@ -3,15 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- feature/listadeagendamentos
-    <title>Document</title>
-
- feature/secaodeagendamento
-    <title>Document</title>
-
     <title>Black Style</title>
- main
- 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -111,7 +103,7 @@
                     </button>
                 </div>
             </div>
- feature/listadeagendamentos
+
         </section>
 
         <!-- AGENDAMENTO -->
@@ -251,78 +243,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
- feature/secaodeagendamento
-        </section>
-<!-- AGENDAMENTO -->
-<section class="section agendamento" id="agendar">
-<p class="subtitulo">RESERVE SEU HORÁRIO</p>
-<h2>Agende seu atendimento</h2>
-
-<form id="formAgendamento">
-<div class="form-grid">
-<div class="campo">
-<label for="nome">Nome completo</label>
-<input type="text" id="nome"
-placeholder="Digite seu nome" required>
-</div>
-
-<div class="campo">
-<label for="telefone">Telefone</label>
-<input type="tel" id="telefone"
-placeholder="(85) 99999-9999" required>
-</div>
-
-<div class="campo">
-<label for="servico">Serviço</label>
-<select id="servico" required>
-<option value="">Selecione o serviço</option>
-<option value="Corte masculino">Corte masculino - R$ 30</option>
-<option value="Barba">Barba - R$ 20</option>
-<option value="Corte + Barba">Corte + Barba - R$ 45</option>
-<option value="Sobrancelha">Sobrancelha - R$ 10</option>
-<option value="Corte infantil">Corte infantil - R$ 25</option>
-</select>
-</div>
-
-<div class="campo">
-<label for="barbeiro">Barbeiro</label>
-<select id="barbeiro" required>
-<option value="">Selecione</option>
-<option value="João">Filipe</option>
-<option value="Carlos">Levi</option>
-<option value="Rafael">Luiz Carlos</option>
-</select>
-</div>
-
-<div class="campo">
-<label for="data">Data</label>
-<input type="date" id="data" required>
-</div>
-</div>
-
-<div class="campo">
-<label>Escolha um horário disponível</label>
-<div id="horarios" class="horarios">
-<p class="mensagem-horario">
-Selecione uma data para ver os horários.
-</p>
-</div>
-<input type="hidden" id="horario" required>
-</div>
-
-<p id="resumo" class="resumo">
-Preencha os dados para visualizar o resumo.
-</p>
-
-<button type="submit" class="btn btn-confirmar">
-Confirmar agendamento
-</button>
-
-<p id="mensagem" class="mensagem"></p>
-</form>
-</section>
-
-        </section>
-
- main
