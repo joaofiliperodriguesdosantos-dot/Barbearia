@@ -1,227 +1,72 @@
 💈 Sistema Web de Agendamento para Barbearia
 
-Sistema web desenvolvido para facilitar o gerenciamento de agendamentos de uma barbearia, permitindo que clientes consultem horários disponíveis e realizem seus agendamentos de forma rápida e organizada.
+Sistema web de agendamento desenvolvido para uma barbearia, com o objetivo de facilitar a marcação de horários e proporcionar uma experiência simples e intuitiva para os clientes.
 
-📋 Sobre o projeto
+O projeto foi desenvolvido utilizando HTML, CSS e JavaScript.
 
-O sistema tem como objetivo digitalizar o processo de agendamento da barbearia, reduzindo conflitos de horários e facilitando o gerenciamento dos atendimentos.
+✨ Funcionalidades
 
-Principais funcionalidades
+💈 Visualização dos serviços oferecidos;
 
-👤 Cadastro e gerenciamento de clientes
+✂️ Seleção do serviço desejado;
 
-💈 Cadastro de barbeiros
+📅 Seleção de data e horário;
 
-✂️ Cadastro de serviços
+👤 Preenchimento dos dados do cliente;
 
-📅 Agendamento de horários
+✅ Confirmação do agendamento;
 
-🕐 Consulta de horários disponíveis
+❌ Cancelamento de agendamento;
 
-🔄 Gerenciamento de agendamentos
+📱 Interface responsiva;
 
-❌ Cancelamento de agendamentos
+🎨 Interface moderna e intuitiva.
 
-📊 Visualização da agenda da barbearia
+🛠️ Tecnologias utilizadas
+HTML5
 
-🔐 Sistema de autenticação de usuários
+Utilizado para a estruturação das páginas e dos elementos da aplicação.
 
-🛠️ Área administrativa
+CSS3
 
-🚀 Tecnologias
+Utilizado para a estilização da interface, criação do layout, responsividade, cores, fontes e efeitos visuais.
 
-As tecnologias utilizadas no projeto podem incluir:
+JavaScript
 
-Frontend: HTML, CSS, JavaScript / React
-
-Backend: Node.js / Express
-
-Banco de dados: MySQL / PostgreSQL / MongoDB
-
-Autenticação: JWT
-
-Controle de versão: Git e GitHub
-
-As tecnologias podem ser alteradas de acordo com a implementação do projeto.
+Utilizado para implementar a interatividade e a lógica do sistema, incluindo seleção de serviços, horários, validação de formulários e manipulação do DOM.
 
 📁 Estrutura do projeto
-barbearia-agendamento/
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── package.json
-│
-├── backend/
-│   ├── src/
-│   ├── routes/
-│   ├── controllers/
-│   ├── models/
-│   └── package.json
-│
-├── database/
-│   └── schema.sql
-│
-├── .env.example
-├── .gitignore
-└── README.md
+src/
+└── arquivos/
+    ├── index.html
+    ├── style.css
+    └── script.js
 
-⚙️ Instalação
-1. Clone o repositório
-git clone https://github.com/seu-usuario/barbearia-agendamento.git
-cd barbearia-agendamento
+🚀 Como executar
 
-2. Instale as dependências
-cd backend
-npm install
+Não é necessário instalar dependências para executar o projeto.
 
+Basta abrir o arquivo index.html em um navegador.
 
-Caso exista um frontend separado:
+Também é possível utilizar o Live Server no Visual Studio Code para executar o projeto localmente.
 
-cd ../frontend
-npm install
+📱 Responsividade
 
-3. Configure as variáveis de ambiente
-
-Crie um arquivo .env baseado no .env.example:
-
-PORT=3000
-DATABASE_URL=sua_url_do_banco
-JWT_SECRET=sua_chave_secreta
-
-4. Configure o banco de dados
-
-Execute as migrations ou o script SQL disponibilizado no projeto.
-
-5. Execute o projeto
-
-Backend:
-
-npm run dev
-
-
-Frontend:
-
-npm run dev
-
-👥 Tipos de usuário
-Cliente
-
-O cliente pode:
-
-Criar uma conta;
-
-Visualizar serviços;
-
-Escolher um barbeiro;
-
-Consultar horários disponíveis;
-
-Realizar agendamentos;
-
-Visualizar seus agendamentos;
-
-Cancelar agendamentos.
-
-Administrador
-
-O administrador pode:
-
-Gerenciar clientes;
-
-Cadastrar e editar barbeiros;
-
-Cadastrar serviços;
-
-Definir horários de funcionamento;
-
-Visualizar a agenda;
-
-Criar, editar e cancelar agendamentos;
-
-Gerenciar os dados da barbearia.
+O sistema foi desenvolvido para se adaptar a diferentes tamanhos de tela, proporcionando uma boa experiência em computadores, tablets e smartphones.
 
 📅 Fluxo de agendamento
 Cliente
    ↓
 Escolhe o serviço
    ↓
-Escolhe o barbeiro
-   ↓
 Escolhe a data
-   ↓
-Consulta horários disponíveis
    ↓
 Escolhe o horário
    ↓
-Confirma o agendamento
+Preenche os dados
    ↓
-Agendamento registrado
+Confirma o agendamento
 
-🔒 Segurança
+🎯 Objetivo
 
-O sistema deve garantir:
-
-Senhas armazenadas de forma segura;
-
-Autenticação dos usuários;
-
-Autorização para rotas administrativas;
-
-Validação dos dados enviados pelo usuário;
-
-Proteção das informações dos clientes;
-
-Prevenção de agendamentos duplicados.
-
-🗃️ Entidades principais
-
-O banco de dados pode conter as seguintes entidades:
-
-users
-
-customers
-
-barbers
-
-services
-
-appointments
-
-business_hours
-
-Exemplo de relacionamento
-Cliente ────────< Agendamento >──────── Barbeiro
-                     │
-                     │
-                     ▼
-                  Serviço
-
-🧪 Testes
-
-Para executar os testes:
-
-npm test
-
-📌 Melhorias futuras
-
-Integração com WhatsApp;
-
-Envio de lembretes automáticos;
-
-Pagamento online;
-
-Dashboard com estatísticas;
-
-Histórico de atendimentos;
-
-Avaliação dos serviços;
-
-Sistema de cupons e descontos;
-
-Aplicativo mobile.
-
-📄 Licença
-
-Este projeto está sob a licença MIT.
-
-Desenvolvido para facilitar o gerenciamento de agendamentos e melhorar a experiência dos clientes da barbearia. 💈✂️
+O projeto tem como objetivo aplicar conhecimentos de desenvolvimento Front-end utilizando HTML, CSS e JavaScript na criação de um sistema de agendamento para uma barbearia.
